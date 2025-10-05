@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Receptionist Panel - MedPulse Hospital</title>
+  <link rel="stylesheet" href="receptionist.css">
+</head>
+<body>
+  <div class="container">
+    <h1><img src="images/logo.jpg" alt="Logo" class="logo"> MedPulse Hospital - Receptionist Panel</h1>
+
+    <form id="patientForm">
+      <label>Patient Name:</label>
+      <input type="text" id="patientName" required />
+
+      <label>Age:</label>
+      <input type="number" id="patientAge" required />
+
+      <label>Gender:</label>
+      <select id="patientGender" required>
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <label>Contact No.:</label>
+      <input type="text" id="patientContact" required />
+
+      <label>Appointment Time:</label>
+      <input type="time" id="appointmentTime" required />
+
+      <label>Date:</label>
+      <input type="date" id="currentDate" readonly />
+
+      <label>Time:</label>
+      <input type="text" id="currentTime" readonly />
+
+      <label>Consultation Charges:</label>
+      <input type="number" id="charges" value="500" readonly />
+
+      <!-- New Patient Issue field -->
+      <label>Patient Issue:</label>
+      <textarea id="patientIssue" rows="3" required></textarea>
+
+      <label>Assign Doctor:</label>
+      <select id="assignedDoctor" required>
+        <option value="">Select Doctor</option>
+        <option value="Dr. Ashish Ganjare">Dr. Ashish Ganjare</option>
+        <option value="Dr. Vikas Gupta">Dr. Vikas Gupta</option>
+        <option value="Dr. Anant Singh Rajput">Dr. Anant Singh Rajput</option>
+        <option value="Dr. Parikshit Mahajan">Dr. Parikshit Mahajan</option>
+        <option value="Dr. Sneha Kulkarni">Dr. Sneha Kulkarni</option>
+        <option value="Dr. Anjali Akhuj">Dr. Anjali Akhuj</option>
+        <option value="Dr. Sonali P. Mahajan">Dr. Sonali P. Mahajan</option>
+        <option value="Dr. Garima Chadda">Dr. Garima Chadda</option>
+        <option value="Dr. Neha Shinde">Dr. Neha Shinde</option>
+        <option value="Dr. Amit Sinha">Dr. Amit Sinha</option>
+      </select>
+
+
+      <button type="submit">Generate Token & Save</button>
+    </form>
+
+    <div class="output">
+      <h2>Patients List</h2>
+      <ul id="patientList"></ul>
+    </div>
+  </div>
+  <div class="delete-section">
+  <label for="deleteSelect">Select Patient to Delete:</label>
+  <select id="deleteSelect">
+    <option value="">-- Select Patient --</option>
+  </select>
+  <button onclick="deleteSelectedPatient()">Delete Selected Patient</button>
+</div>
+
+
+  <script src="receptionist.js"></script>
+</body>
+</html>

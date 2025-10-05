@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #e6f7ff, #ffffff);
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  background: #fdfdfd;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  border: 1px solid #ccc;
+}
+
+.logo {
+  width: 50px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #007b7d;
+}
+
+form {
+  display: grid;
+  gap: 15px;
+}
+
+input, select, button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #007b7d;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #005f60;
+}
+
+.output {
+  margin-top: 30px;
+}
+
+ul#patientList {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul#patientList li {
+  background: #e6f7ff;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 8px;
+}

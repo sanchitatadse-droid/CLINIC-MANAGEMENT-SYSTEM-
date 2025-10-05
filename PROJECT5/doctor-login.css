@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url("images/doctor.jpg") no-repeat center center/cover;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.login-container {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 900px;
+}
+
+.quote-section {
+  background: #007B8A;
+  color: white;
+  padding: 40px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-style: italic;
+}
+
+.quote-section h1 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.form-section {
+  width: 50%;
+  padding: 40px;
+  text-align: center;
+}
+
+.form-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #007B8A;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #007B8A;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #007B8A;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #005f6b;
+}
+
+.error-msg {
+  margin-top: 20px;
+  font-weight: bold;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Doctor Profile</title>
+  <link rel="stylesheet" href="doctor-profile.css" />
+</head>
+<body>
+  <div class="profile-container">
+    <div class="doctor-image">
+      <img id="docImage" src="" alt="Doctor Image" />
+    </div>
+    <div class="doctor-details">
+      <h1 id="docName">Loading...</h1>
+      <h3 id="docSpecialty"></h3>
+      <p id="docQualification"></p>
+      <p id="docAbout"></p>
+      <div class="doctor-patients">
+        <h2>Assigned Patients</h2>
+        <ul id="patientList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="doctors.js"></script>
+  <script>
+    const doctor = JSON.parse(localStorage.getItem("loggedDoctor"));
+
+    if (doctor && typeof getDoctorById === 'function') {
+      const fullDoctor = getDoctorById(doctor.id);
+      if (fullDoctor) {
+        document.getElementById("docImage").src = fullDoctor.image;
+        document.getElementById("docName").textContent = fullDoctor.name;
+        document.getElementById("docSpecialty").textContent = fullDoctor.specialty;
+        document.getElementById("docQualification").textContent = fullDoctor.qualification;
+        document.getElementById("docAbout").textContent = fullDoctor.about;
+
+        const patients = JSON.parse(localStorage.getItem(fullDoctor.name)) || [];
+        const list = document.getElementById("patientList");
+
+        if (patients.length === 0) {
+          list.innerHTML = "<li>No patients assigned.</li>";
+        } else {
+          patients.forEach(p => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+              <strong>${p.name}</strong> | Age: ${p.age} | Gender: ${p.gender}<br>
+              Issue: ${p.issue}<br>
+              Date: ${p.date} @ ${p.time}<br>
+              Contact: ${p.contact} | Charges: ₹${p.charges}<br>
+              <button onclick="startConsultation('${p.token}')">Start Consultation</button>
+            `;
+            list.appendChild(li);
+          });
+        }
+
+      } else {
+        document.getElementById("docName").textContent = "Doctor not found.";
+      }
+    } else {
+      document.getElementById("docName").textContent = "No doctor is logged in.";
+    }
+
+    function startConsultation(token) {
+      window.open(`consultation-form.html?token=${token}`, "_blank");
+    }
+  </script>
+</body>
+</html>

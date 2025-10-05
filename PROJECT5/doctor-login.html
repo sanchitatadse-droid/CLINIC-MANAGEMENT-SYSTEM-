@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Doctor Login - Aureus Hospital</title>
+  <link rel="stylesheet" href="doctor-login.css" />
+</head>
+<body>
+  <div class="login-container">
+    <div class="quote-section">
+      <h1>"Wherever the art of Medicine is loved, there is also a love of Humanity."</h1>
+      <p>- Hippocrates</p>
+    </div>
+
+    <div class="form-section">
+      <h2>Doctor Login</h2>
+      <form id="loginForm">
+        <input type="text" id="name" placeholder="Enter your full name" required />
+        <input type="text" id="id" placeholder="Enter your doctor ID" required />
+        <button type="submit">Login</button>
+        <p id="loginMsg" class="error-msg"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="doctors.js"></script>
+  <script>
+    const form = document.getElementById("loginForm");
+    const loginMsg = document.getElementById("loginMsg");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const id = document.getElementById("id").value.trim();
+      const doctor = validateDoctor(name, id);
+      
+      if (doctor) {
+        loginMsg.style.color = "green";
+        loginMsg.textContent = `Welcome, ${doctor.name}!`;
+
+        // Save the logged-in doctor data to localStorage
+        localStorage.setItem("loggedDoctor", JSON.stringify(doctor));
+
+        // Open profile page in a new tab after 1 second
+        setTimeout(() => {
+          window.open("doctor-profile.html", "_blank");
+        }, 1000);
+
+      } else {
+        loginMsg.style.color = "red";
+        loginMsg.textContent = "Invalid Name or ID. Please try again.";
+      }
+    });
+  </script>
+</body>
+</html>

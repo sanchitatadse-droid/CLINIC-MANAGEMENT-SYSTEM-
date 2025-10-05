@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.top-bar {
+  background-color: #c19e6c;
+  color: #fff;
+  padding: 6px 20px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav-menu a {
+  margin: 0 8px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.book-btn, .insurance-btn {
+  background-color: #c19e6c;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.hero-section {
+  position: relative;
+  min-height: 380px;
+}
+
+.hero-bg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.85) contrast(1.1);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 60px 20px 20px;
+  z-index: 2;
+}
+
+.hero-logo {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.hero-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: #2c1b0f;
+  line-height: 1.6;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.helpline {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Welcome & Specialities Section Styling */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #2c1b0f;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background-color: #fcd21b;
+  margin: 0 auto 30px;
+}
+
+.intro-text {
+  font-size: 18px;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.specialities-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.speciality-card {
+  background-color: #f9f9f9;
+  width: 180px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.speciality-card img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.speciality-card img {
+  width: 75px;      /* Slightly increased from 60px */
+  height: 75px;     /* Added height for uniform sizing */
+  margin-bottom: 12px;
+  object-fit: contain; /* Keeps image proportions nicely */
+}
+.about-section {
+  background-color: #fff;
+  padding: 60px 20px;
+}
+
+.about-section .intro-text {
+  text-align: left;
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MedPulse Hospital</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Segoe+UI&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    Landline: 0712-2820300 / 311 / 322, OPD: +91 87665 09593 |
+    info@medpulsehospital.com | An NABH Accredited Hospital
+  </div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-left">
+      <img src="images/logo.jpg" alt="MedPulse Logo" class="logo">
+    </div>
+    <nav class="nav-menu">
+      <a href="#home">HOME</a>
+      <a href="#" id="about-link">ABOUT</a>
+      <a href="consultants.html">OUR CONSULTANTS</a>
+      <a href="receptionist.html">RECEPTIONIST</a>
+      <a href="doctor-login.html">DOCTOR LOGIN</a>
+      
+      
+    </nav>
+  </header>
+
+  <!-- Main Banner -->
+  <section class="hero-section">
+    <img src="images/banner.jpg" alt="Hospital Banner" class="hero-bg">
+    <div class="hero-overlay">
+      <img src="images/logo.jpg" alt="MedPulse Logo" class="hero-logo">
+      <div class="hero-text">
+        <h2>Highly sterilized operation theatre equipped with ultra modern<br>machines, instruments & technology</h2>
+        <div class="helpline">
+          <strong>Helpline</strong><br>
+          0712-2820300 / 311 / 322
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section (Always visible) -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <div class="underline"></div>
+      <p class="intro-text">
+        MedPulse Institute of Medical Sciences is a 100-bedded super-specialty hospital situated in the heart of Nagpur offering comprehensive medical services.
+        It is the youngest NABH-accredited hospital in Central India. The hospital follows internationally benchmarked standards in medical, nursing, and operating protocols.
+        <br><br>
+        The entire team at MedPulse Hospital ensures the highest quality of care. We strive to set the best standards in healthcare with continual improvement in the system.
+        By adopting excellence & quality in providing medical care in a comfortable & convenient environment, the hospital brings peace of mind & wellness to thousands of patients.
+        <br><br>
+        Established in 2018, MedPulse Institute of Medical Sciences in Wanjari Nagar, Nagpur is a well-managed and highly sought-after medical institution in the region.
+      </p>
+    </div>
+  </section>
+
+  <!-- Welcome Section -->
+  <section class="welcome-section" id="home">
+    <div class="container">
+      <h2 class="section-title">Welcome to MedPulse Hospital</h2>
+      <div class="underline"></div>
+      <p class="intro-text">
+        MedPulse Hospital is a leading multi-speciality hospital offering best-in-class medical services.
+        The 100-bed multi-speciality hospital was started with the objective of providing world-class
+        healthcare services and specialized medical facilities at affordable costs.
+      </p>
+    </div>
+  </section>
+
+  <!-- Specialities Section -->
+  <section class="specialities-section">
+    <div class="container">
+      <h2 class="section-title">Our Speciality & Services</h2>
+      <div class="underline"></div>
+
+      <div class="specialities-carousel">
+        <div class="speciality-card">
+          <img src="images/1.jpg" alt="General Surgery">
+          <h3>GENERAL & MINIMAL ACCESS SURGERY</h3>
+        </div>
+        <div class="speciality-card">
+          <img src="images/2.jpg" alt="Urology">
+          <h3>UROLOGY</h3>
+        </div>
+        <div class="speciality-card">
+          <img src="images/3.jpg" alt="Internal Medicine">
+          <h3>INTERNAL MEDICINE</h3>
+        </div>
+        <div class="speciality-card">
+          <img src="images/4.jpg" alt="Neurology">
+          <h3>NEUROLOGY</h3>
+        </div>
+        <div class="speciality-card">
+          <img src="images/5.jpg" alt="Nephrology">
+          <h3>NEPHROLOGY</h3>
+        </div>
+        <div class="speciality-card">
+          <img src="images/6.jpg" alt="Gynae">
+          <h3>OBSTETRICS & GYNAECOLOGY</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById("about-link").addEventListener("click", function(e) {
+      e.preventDefault();
+      document.getElementById("about").scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
